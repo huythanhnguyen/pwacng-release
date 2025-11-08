@@ -155,7 +155,7 @@ export const streamAIResponse = async ({
 
       onopen: (res) => {
         if (!res.ok) {
-          onError?.({ status: res.status }));
+          onError?.({ status: res.status });
           throw new Error(`SSE open failed: ${res.status}`);
         }
       },
