@@ -1,0 +1,45 @@
+.fieldNote {
+    color: #7A7E80;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.12px;
+    margin-top: 5px;
+}
+
+.contentTitle {
+    color: #0272BA;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.block {
+    border-radius: 4px;
+    background: #FFF;
+    margin-top: 10px;
+}
+
+.blockContent > div:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+    .block {
+        padding: 20px;
+    }
+
+    .fields {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .block {
+        padding: 10px;
+    }
+}

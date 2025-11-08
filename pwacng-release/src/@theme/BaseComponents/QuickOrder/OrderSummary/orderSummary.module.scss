@@ -1,0 +1,100 @@
+.totalWrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .label {
+        color: #2A2F33;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.08px;
+    }
+
+    .price {
+        color: #E82230;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.08px;
+    }
+
+    .count {
+        color: #E82230;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.08px;
+    }
+}
+
+.blockContent {
+    background-color: #fff;
+    border-radius: 4px;
+
+    .actions {
+        .buttonRemoveAll {
+            color: #005C98;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                margin-top: -2px;
+            }
+        }
+
+        button {
+            box-shadow: none;
+        }
+    }
+}
+
+.addToCart_disabled {
+    width: 100%;
+
+    button {
+        border: 1px solid #EAEBEC;
+        background: #F9F9F9;
+        color: #B5C0CA;
+        pointer-events: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .blockContent {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .actions {
+        align-items: center;
+        gap: 20px;
+        display: flex;
+
+        button {
+            width: auto;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .blockContent {
+        padding: 10px;
+
+        .totalWrapper {
+            margin-bottom: 10px;
+        }
+
+        .actions {
+            .buttonRemoveAll {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

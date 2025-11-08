@@ -1,0 +1,143 @@
+.root {
+    border-radius: 4px;
+    background: #F9F9F9;
+    padding: 15px;
+    min-height: 124px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px 20px;
+    flex-wrap: wrap;
+
+    .radio {
+        display: flex;
+        position: relative;
+
+        &:before {
+            content: '';
+            border: 1.5px solid #C5C6CC;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            min-width: 16px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+    }
+
+    .name {
+        font-weight: 400;
+        color: #0A1015;
+        font-size: 18px;
+        font-style: normal;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .address {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+        color: #7A7E80;
+    }
+
+    .note {
+        @apply mb-0;
+        @apply italic;
+
+        font-size: 13px;
+        color: #e82230;
+    }
+
+    &.disabled {
+        opacity: 0.85;
+        cursor: not-allowed;
+
+        .radio {
+            &:before {
+                border-color: #e3e3e3;
+                background-color: #fafafa;
+            }
+        }
+
+        .name {
+            color: #7A7E80;
+        }
+
+        .address {
+            color: #999999;
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 5px;
+    }
+}
+
+.root_updated {
+    composes: root;
+}
+
+.root_selected {
+    composes: root;
+
+    background: #F1F9FF;
+
+    .radio {
+        &:before {
+            background-color: #1D92DD;
+            border-color: #1D92DD;
+        }
+
+        &:after {
+            content: '';
+            background-color: #fff;
+            position: absolute;
+            border-radius: 50%;
+            width: 6px;
+            height: 6px;
+            left: 5px;
+            top: 5px;
+        }
+    }
+
+    .name {
+        font-weight: 500;
+    }
+
+    .address {
+        color: #2A2F33;
+    }
+}
+
+.editButton {
+    border-radius: 5px;
+    border: 1px solid #1D92DD;
+    background: #FFF;
+    padding: 10px 20px;
+    display: flex;
+    gap: 10px;
+    color: #0272BA;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.14px;
+}
+
+.defaultBadge {
+    border-radius: 4px;
+    border: 1px solid #B8B8B8;
+    background: #FFF;
+    padding: 5px 10px;
+    color: #0272BA;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.12px;
+    display: block;
+    width: max-content;
+    margin-bottom: 10px;
+}

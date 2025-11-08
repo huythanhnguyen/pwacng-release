@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('./@theme/static/fonts/Roboto/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./@theme/static/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('./@theme/static/fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./@theme/static/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+}
+
+/* Montserrat */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./@theme/static/fonts/Montserrat/Montserrat-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./@theme/static/fonts/Montserrat/Montserrat-Italic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./@theme/static/fonts/Montserrat/Montserrat-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./@theme/static/fonts/Montserrat/Montserrat-BoldItalic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('./@theme/static/fonts/Montserrat/Montserrat-ExtraBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 800;
+    font-display: swap;
+    src: url('./@theme/static/fonts/Montserrat/Montserrat-ExtraBoldItalic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('./@theme/static/fonts/Montserrat/Montserrat-Black.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url('./@theme/static/fonts/Montserrat/Montserrat-BlackItalic.otf') format('opentype');
+}
+
+:focus-visible {
+    outline: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#fc_frame[class=""] {
+    filter: opacity(0);
+    -moz-opacity: 0;
+    opacity: 0;
+}
+
+div.uiSelect__control,
+div.uiSelect__control:hover {
+    min-height: 44px;
+    border-color: #DBDBDB;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+div.uiSelect__control.uiSelect__control--is-focused {
+    border-color: #71B4FF;
+    box-shadow: 0 2px 5px 0 rgba(113, 180, 255, 0.5);
+}
+
+.uiSelect__control .uiSelect__value-container {
+    padding: 10px 10px 10px 15px;
+    font-size: 15px;
+}
+
+.uiSelect__control .uiSelect__input-container,
+.uiSelect__control .uiSelect__placeholder,
+.uiSelect__control .uiSelect__single-value {
+    margin: 0;
+    padding: 0;
+}
+
+.uiSelect__control .uiSelect__input-container,
+.uiSelect__control .uiSelect__single-value {
+    color: #111827;
+    font-weight: 400;
+}
+
+.uiSelect__control .uiSelect__placeholder {
+    color: #AFAFAF;
+    font-weight: 300;
+}
+
+.uiSelect__control .uiSelect__dropdown-indicator {
+    padding: 8px 13px 8px 4px;
+}
+
+.uiSelect__control .uiSelect__dropdown-indicator svg {
+    width: 19px;
+    fill: #0272BA;
+    stroke: #0272BA;
+}
+
+.uiSelect__control .uiSelect__indicator-separator {
+    display: none;
+}
+
+.uiSelect__control .uiSelect__input-container {
+    display: block;
+}
+
+.uiSelect__control .uiSelect__input-container:after {
+    display: none;
+}
+
+.uiSelect__control .uiSelect__input:focus {
+    background: #FFFFFF !important;
+}
+
+.uiSelect__menu-portal .uiSelect__menu {
+    margin: 0;
+}
+
+.uiSelect__menu-portal .uiSelect__option {
+    padding: 10px 12px;
+}
+
+.uiSelect__menu-portal .uiSelect__option--is-selected {
+    color: #ffffff;
+    background: #0272BA;
+}
+
+@media (min-width: 641px) {
+    .uiSelect__menu-portal .uiSelect__menu {
+        box-shadow: none;
+        border-radius: 0;
+        overflow: hidden;
+    }
+
+    .uiSelect__menu-portal  .uiSelect__menu-list {
+        border: 1px solid #DBDBDB;
+    }
+}
+
+@media (max-width: 640px) {
+    .ui-select-opened:before {
+        content: "";
+        display: block;
+        position: fixed;
+        z-index: 60;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.16);
+    }
+
+    div.uiSelect__control {
+        position: relative;
+    }
+
+    div.uiSelect__control .uiSelect__input-container {
+        transform: none;
+    }
+
+    div.uiSelect__control .uiSelect__dropdown-indicator:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    div.uiSelect__control input.uiSelect__input {
+        position: fixed;
+        z-index: -1;
+        bottom: -48px;
+        left: 0;
+        right: 0;
+        width: 100% !important;
+        height: 48px;
+        padding: 8px 16px !important;
+        background: #ffffff !important;
+        border-radius: 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+        filter: alpha(opacity=0);
+        -moz-opacity: 0;
+        opacity: 0;
+    }
+
+    div.uiSelect__control.uiSelect__control--menu-is-open input.uiSelect__input {
+        z-index: 99999;
+        bottom: 0;
+        filter: alpha(opacity=100);
+        -moz-opacity: 1;
+        opacity: 1;
+    }
+
+    div.uiSelect__menu-portal {
+        position: fixed;
+        top: 20px;
+        bottom: 60px;
+        left: 10px;
+        width: 0;
+    }
+
+    .uiSelect__menu-portal .uiSelect__menu {
+        top: auto;
+        bottom: 0;
+        width: calc(100vw - 20px);
+        max-height: 100%;
+    }
+}

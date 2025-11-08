@@ -1,0 +1,264 @@
+.root {
+    composes: flex-1 from global;
+    margin: -10px;
+    padding: 10px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #FAFAFA;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #E9E9E9;
+        border-radius: 3px;
+    }
+
+    &:hover {
+        &::-webkit-scrollbar-thumb {
+            background: #DDDDDD;
+        }
+    }
+
+    &:not(:first-child) {
+        @apply pt-2;
+    }
+}
+
+.title {
+    color: #2A2F33;
+    font-weight: 500;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.suggestions {
+    display: block;
+}
+
+.popularKeysWrapper {
+    h3 {
+        display: none;
+    }
+}
+
+.popularKeys {
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.popularKey {
+    border-radius: 100px;
+    background: #F1F6F9;
+    color: #295679;
+    font-weight: 400;
+    transition: all .3s;
+    white-space: nowrap;
+
+    a {
+        padding: 8px 15px;
+        display: block;
+    }
+
+    &:hover {
+        color: #FFFFFF;
+        background: #0272BA;
+    }
+}
+
+.suggestionCategory {
+    margin-top: 20px;
+
+    img {
+        margin: 0 auto 10px;
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    p {
+        color: #000;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    :global {
+        .customPosterOverlay {
+            padding: 0;
+        }
+
+        .slick-slider.slick-initialized {
+            .slick-track {
+                display: flex;
+
+                .slick-slide {
+                    height: auto;
+
+                    div {
+                        height: 100%;
+                    }
+
+                    .customPosterOverlay {
+                        > div {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+
+            .slick-prev, .slick-next {
+                width: 30px;
+                height: 30px;
+            }
+
+            .slick-prev {
+                left: -42px;
+            }
+
+            .slick-next {
+                right: -42px;
+            }
+        }
+    }
+}
+
+.removeAllHistory {
+    color: #0272BA;
+    font-weight: 400;
+}
+
+.searchHistoryList {
+    margin-bottom: 20px;
+}
+
+.searchHistoryItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #295679;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 15px 0;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #F3F3F3;
+    }
+
+    &:last-child {
+        padding-bottom: 10px;
+    }
+
+    .value {
+        cursor: pointer;
+    }
+
+    .removeSearchHistory {
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 1440px) {
+    .suggestionCategory {
+        :global {
+            .slick-track {
+                margin: 0 -12.5px;
+            }
+
+            .slick-slide {
+                padding: 0 12.5px;
+                min-width: 120px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .title {
+        font-size: 18px;
+    }
+
+    .removeAllHistory {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .popularKey {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .suggestionCategory {
+        .sliders {
+            padding: 0 42px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .suggestionCategory {
+        :global {
+            .slick-track {
+                margin: 0 -8px;
+            }
+
+            .slick-slide {
+                padding: 0 8px;
+                min-width: 90px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .title {
+        font-size: 14px;
+    }
+
+    .removeAllHistory {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .popularKey {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .suggestionCategory {
+        p {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+}
+
+

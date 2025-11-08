@@ -1,0 +1,29 @@
+.actions {
+    composes: flex from global;
+    gap: 10px;
+
+    button {
+        padding: 11px 10px;
+        width: 100%;
+    }
+}
+
+.modalInnerWidth {
+    max-width: 510px;
+}
+
+.createWishlist {
+    composes: w-full from global;
+}
+
+.formErrors {
+    composes: mb-2 from global;
+    font-size: 15px;
+    color: #E82230;
+}
+
+@media (max-width: 768px) {
+    .actions {
+        flex-direction: column;
+    }
+}

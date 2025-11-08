@@ -1,0 +1,91 @@
+.root {
+    composes: pb-5 from global;
+}
+
+.listingView {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: gap-2 from global;
+    composes: mb-2 from global;
+
+    composes: md_gap-4 from global;
+    composes: md_mb-4 from global;
+}
+
+.item {
+    composes: p-1 from global;
+    composes: bg-white from global;
+    composes: rounded-radius3 from global;
+
+    composes: md_p-2 from global;
+}
+
+.imageContainer {
+    composes: relative from global;
+    composes: block from global;
+    composes: h-0 from global;
+    composes: overflow-hidden from global;
+    composes: rounded from global;
+
+    padding-bottom: 139%;
+    background: #F5F5F5;
+
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.name {
+    composes: overflow-hidden from global;
+    composes: text-ellipsis from global;
+    composes: whitespace-nowrap from global;
+    composes: relative from global;
+    composes: mt-2 from global;
+    composes: pr-8 from global;
+    composes: font-bold from global;
+    composes: text-base from global;
+
+    @apply md_text-[16px] md_leading-6;
+}
+
+@media (max-width: 768px) {
+    .listingView {
+        .item {
+            width: calc((100% - 16px) / 3);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .listingView {
+        .item {
+            width: calc((100% - 8px) / 2);
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .listingView {
+        .item {
+            width: calc((100% - 48px) / 4);
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .listingView {
+        .item {
+            width: calc((100% - 64px) / 5);
+        }
+    }
+}

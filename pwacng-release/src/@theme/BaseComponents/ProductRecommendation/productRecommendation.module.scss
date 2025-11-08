@@ -1,0 +1,195 @@
+.productRecommendationWrapper {
+    composes: md_my-5 from global;
+
+    @apply md_py-0;
+
+    :global(.products-background-wrapper) {
+        background-color: #F25920;
+    }
+}
+
+.productRecommendationBanner {
+    composes: w-full from global;
+    composes: mb-2 from global;
+
+    composes: md_mb-4 from global;
+}
+
+.productRecommendationTitle {
+    h2 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 3px 9px;
+        color: #E82230;
+    }
+}
+
+.gridGalleryItems {
+    composes: grid from global;
+    grid-area: items;
+    gap: 10px;
+}
+
+@media (max-width: 480px) {
+    .gridGalleryItems {
+        grid-template-columns: repeat(2, 1fr);
+
+        > div {
+            &:nth-child(2n+3) {
+                &:last-child {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: 959px) {
+    .gridGalleryItems {
+        grid-template-columns: repeat(3, 1fr);
+
+        > div {
+            &:nth-child(3n+4) {
+                &:last-child,
+                &:nth-last-child(2) {
+                    &,
+                    ~ div {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1199px) {
+    .gridGalleryItems {
+        grid-template-columns: repeat(4, 1fr);
+
+        > div {
+            &:nth-child(4n+5) {
+                &:last-child,
+                &:nth-last-child(2),
+                &:nth-last-child(3) {
+                    &,
+                    ~ div {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1479px) {
+    .gridGalleryItems {
+        grid-template-columns: repeat(5, 1fr);
+
+        > div {
+            &:nth-child(5n+6) {
+                &:last-child,
+                &:nth-last-child(2),
+                &:nth-last-child(3),
+                &:nth-last-child(4) {
+                    &,
+                    ~ div {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1480px) {
+    .gridGalleryItems {
+        grid-template-columns: repeat(6, 1fr);
+
+        > div {
+            &:nth-child(6n+7) {
+                &:last-child,
+                &:nth-last-child(2),
+                &:nth-last-child(3),
+                &:nth-last-child(4),
+                &:nth-last-child(5) {
+                    &,
+                    ~ div {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .productRecommendationTitle {
+        h2 {
+            gap: 5px 20px;
+        }
+    }
+
+    :global(.twoColumnsLayout) {
+        --leftViewportElement: 0;
+        --scrollBarWidth: var(--global-scrollbar-width, 0px);
+
+        &.fullBleed {
+            width: calc(100vw - var(--scrollBarWidth));
+            transform: translateX(-50%);
+            margin-left: 50%;
+
+            > .contained {
+                @apply mx-auto;
+                max-width: 1582px;
+                padding-left: 45px;
+                padding-right: 45px;
+            }
+        }
+
+        .productRecommendation {
+            @apply flex;
+            @apply w-full;
+            gap: 20px 56px;
+
+            > div {
+                @apply my-auto;
+                width: 50%;
+                max-width: calc(100% - 316px);
+            }
+        }
+
+        .productRecommendationBanner {
+            @apply my-auto;
+            width: 50%;
+            min-width: 316px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    :global(.twoColumnsLayout) {
+        &.fullBleed {
+            > .contained {
+                padding-left: 70px;
+                padding-right: 70px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .productRecommendationWrapper {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .applyStyle {
+        .gridGalleryItems {
+            @apply bg-white;
+            @apply rounded;
+
+            padding: 10px;
+        }
+    }
+}

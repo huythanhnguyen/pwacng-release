@@ -1,0 +1,34 @@
+@media (min-width: 769px) {
+    .form {
+        display: flex;
+        gap: 10px;
+    }
+
+    .fields {
+        display: flex;
+        gap: 10px;
+        flex: 1;
+
+        > div {
+            margin-bottom: 0;
+        }
+    }
+
+    .buttonContainer {
+        padding-top: 23px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fields {
+        > div {
+            margin-bottom: 15px;
+        }
+    }
+
+    .buttonContainer {
+        button {
+            width: auto;
+        }
+    }
+}

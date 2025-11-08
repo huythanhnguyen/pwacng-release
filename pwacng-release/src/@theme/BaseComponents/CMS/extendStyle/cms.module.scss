@@ -1,0 +1,56 @@
+.root {
+    padding: 0;
+
+    &:global(.cmsPage) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+.root_empty,
+.root_1column,
+.root_2columnsLeft,
+.root_2columnsRight,
+.root_3columns,
+.root_cmsFullWidth,
+.root_categoryFullWidth,
+.root_productFullWidth {
+    composes: root;
+}
+
+.heading {
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+@media (min-width: 769px) {
+    .root {
+        &:global(.cmsPage) {
+            max-width: 1582px;
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+    }
+
+    .heading {
+        font-size: 24px;
+        margin: 20px 0 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .root {
+        &:global(.cmsPage) {
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 18px;
+        margin: 30px 0 40px;
+    }
+}

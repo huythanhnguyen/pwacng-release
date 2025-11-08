@@ -1,0 +1,25 @@
+.root {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0 15px;
+    border-bottom: 1px solid #F5F5F5;
+    margin-bottom: 8px;
+
+    svg {
+        stroke: #0272BA;
+    }
+}
+
+.target {
+    display: flex;
+    color: #2A2F33;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.12px;
+}
+
+.text {
+    display: block;
+}

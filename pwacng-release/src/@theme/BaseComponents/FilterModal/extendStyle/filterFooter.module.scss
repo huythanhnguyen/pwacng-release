@@ -1,0 +1,17 @@
+.root {
+    composes: bg-white from global;
+    composes: content-center from global;
+    composes: gap-y-1 from global;
+    composes: grid from global;
+    composes: items-center from global;
+    composes: justify-items-center from global;
+    composes: relative from global;
+    composes: px-5 from global;
+    margin-top: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    button {
+        padding: 12px;
+    }
+}

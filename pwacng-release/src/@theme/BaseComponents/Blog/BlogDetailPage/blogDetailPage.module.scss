@@ -1,0 +1,21 @@
+.root {
+    width: 100%;
+
+    .breadcrumbs {
+        margin-bottom: 15px;
+    }
+
+    .main {
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid #E6E6E6;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 769px) {
+    .wrapper {
+        display: flex;
+        gap: 30px;
+    }
+}

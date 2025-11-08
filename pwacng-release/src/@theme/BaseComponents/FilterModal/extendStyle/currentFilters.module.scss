@@ -1,0 +1,39 @@
+.root {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    :global(.noProducts) & {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.currentFilterTitle {
+    order: -1;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 4px;
+
+    span {
+        display: none;
+    }
+
+    :global(.noProducts) & {
+        display: block;
+
+        span {
+            display: block;
+        }
+    }
+}
+
+.item {
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .currentFilterTitle {
+        display: none;
+    }
+}

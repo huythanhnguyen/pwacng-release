@@ -1,0 +1,88 @@
+.trigger {
+    color: #FFF;
+    font-weight: 500;
+    line-height: 1.2;
+    position: relative;
+
+    &:before {
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='22' viewBox='0 0 24 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.9434 2.93333H5.73659L4.35185 0.45126C4.19642 0.17266 3.90238 0 3.58336 0H1.82336C1.33735 0 0.943359 0.393989 0.943359 0.88C0.943359 1.36601 1.33735 1.76 1.82336 1.76H3.06662L4.4332 4.20951L7.58486 11.1829L7.58809 11.19L7.86568 11.8042L4.70139 15.1795C4.47387 15.4222 4.40264 15.7724 4.51732 16.0847C4.63199 16.397 4.91295 16.6179 5.24346 16.6556L8.12767 16.9853C11.7353 17.3976 15.3781 17.3976 18.9858 16.9853L21.87 16.6556C22.3528 16.6005 22.6995 16.1643 22.6444 15.6814C22.5892 15.1985 22.153 14.8518 21.6701 14.907L18.7859 15.2367C15.3111 15.6338 11.8023 15.6338 8.32751 15.2367L7.1829 15.1058L9.50537 12.6285C9.52784 12.6046 9.5487 12.5797 9.56797 12.554L10.4513 12.6689C11.6891 12.83 12.9402 12.8616 14.1846 12.7632C17.0868 12.5336 19.7766 11.1526 21.6544 8.92798L22.3327 8.12446C22.3555 8.09747 22.3766 8.06914 22.396 8.03961L23.6601 6.11317C24.5561 4.74769 23.5766 2.93333 21.9434 2.93333Z' fill='white'/%3E%3Cpath d='M7.10336 18.48C6.13134 18.48 5.34336 19.268 5.34336 20.24C5.34336 21.212 6.13134 22 7.10336 22C8.07538 22 8.86336 21.212 8.86336 20.24C8.86336 19.268 8.07538 18.48 7.10336 18.48Z' fill='white'/%3E%3Cpath d='M18.25 20.24C18.25 19.268 19.038 18.48 20.01 18.48C20.982 18.48 21.77 19.268 21.77 20.24C21.77 21.212 20.982 22 20.01 22C19.038 22 18.25 21.212 18.25 20.24Z' fill='white'/%3E%3C/svg%3E%0A");
+        height: 22px;
+        width: 24px;
+        margin: 0 auto 2px;
+        content: '';
+        display: block;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .counter {
+        border-radius: 50%;
+        border: 1px solid #CF0B0B;
+        background: #EB2030;
+        box-shadow: 0 4px 4px 0 rgba(26, 26, 26, 0.29);
+        color: #FFF;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 13px;
+        min-width: 22px;
+        min-height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+}
+
+.triggerContainer_open {
+    display: block;
+}
+
+@media (min-width: 1440px) {
+    .trigger {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .trigger {
+        padding: 8px 15px;
+        transition: all .3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        &:hover {
+            border-radius: 100px;
+            background: #003568;
+        }
+
+        .counter {
+            top: -7px;
+            right: 20px;
+        }
+    }
+}
+
+@media (max-width: 1439px) and (min-width: 1024px) {
+    .trigger {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .trigger {
+        .counter {
+            left: 12px;
+            bottom: 13px;
+        }
+    }
+
+    .triggerContainer {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

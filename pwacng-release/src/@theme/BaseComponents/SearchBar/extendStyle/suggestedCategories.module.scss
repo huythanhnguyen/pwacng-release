@@ -1,0 +1,9 @@
+.root {
+    composes: mb-4 from global;
+}
+
+.item {
+    &:not(:last-child) {
+        @apply mb-2;
+    }
+}

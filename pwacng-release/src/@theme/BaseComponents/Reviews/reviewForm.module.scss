@@ -1,0 +1,155 @@
+.formTitle {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+    color: #000;
+}
+
+.reviewRatings {
+    margin-bottom: 20px;
+
+    .reviewRating {
+        &:first-child:last-child {
+            .ratingName {
+                display: none;
+            }
+        }
+    }
+
+    .ratingName {
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
+.reviewRatingInner {
+    position: relative;
+    left: -5px;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 250px;
+        height: 40px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='40' viewBox='0 0 40 40' fill='none'%3E%3Cmask id='mask0_4162_22506' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='40' height='39'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M26.1165 15.8312C24.7591 15.6339 23.5858 14.7812 22.979 13.551L20 7.51165L17.021 13.551C16.4142 14.7812 15.2408 15.6339 13.8834 15.8312L7.21652 16.8001L12.0415 21.5043C13.0235 22.4616 13.4714 23.8408 13.2395 25.1924L12.1004 31.83L18.061 28.6962C19.2749 28.058 20.7251 28.058 21.939 28.6962L27.8996 31.83L26.7605 25.1924C26.5285 23.8408 26.9765 22.4616 27.9584 21.5043L32.7835 16.8001L26.1165 15.8312ZM38.7069 13.4505C39.5334 13.5733 40.1096 14.3384 39.9821 15.1649C39.9349 15.4955 39.779 15.7977 39.5429 16.0292L30.8671 24.4877L32.9168 36.4316C33.0585 37.2534 32.5059 38.0326 31.6842 38.1743C31.3583 38.231 31.0182 38.179 30.7254 38.0232L20 32.3842L9.27454 38.0232C9.02519 38.1548 8.74394 38.214 8.46269 38.1939C8.18143 38.1739 7.91143 38.0754 7.68328 37.9097C7.45514 37.744 7.27798 37.5177 7.17191 37.2565C7.06584 36.9952 7.0351 36.7094 7.08316 36.4316L9.13285 24.4877L0.457092 16.0292C0.169804 15.7491 0.00544632 15.3665 0.000132927 14.9653C-0.00518047 14.5642 0.148985 14.1773 0.428755 13.8897C0.660172 13.6536 0.962431 13.4977 1.29303 13.4505L13.2842 11.7078L18.6445 0.840674C19.0176 0.0944733 19.9244 -0.212508 20.6706 0.155869C20.9682 0.302276 21.209 0.543138 21.3554 0.840674L26.7158 11.7078L38.7069 13.4505Z' fill='%23006FFD'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_4162_22506)'%3E%3Crect width='40' height='40' fill='%23F0F0F0'/%3E%3C/g%3E%3C/svg%3E") repeat-x;
+    }
+
+    > label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40px;
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 0;
+            line-height: 0;
+            color: rgba(0, 0, 0, 0);
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='40' viewBox='0 0 40 40' fill='none'%3E%3Cg clip-path='url(%23clip0_4162_22502)'%3E%3Cmask id='mask0_4162_22502' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='40' height='39'%3E%3Cpath d='M38.7074 13.4507L26.7161 11.7079L21.3557 0.840683C21.2092 0.543144 20.9684 0.302279 20.6708 0.155871C19.9246 -0.21251 19.0179 0.0944743 18.6447 0.840683L13.2843 11.7079L1.29304 13.4507C0.962441 13.4979 0.660179 13.6537 0.42876 13.8899C0.148987 14.1774 -0.00518052 14.5643 0.000132929 14.9655C0.00544638 15.3666 0.169806 15.7493 0.457097 16.0293L9.13295 24.4879L7.08324 36.432C7.03517 36.7098 7.06592 36.9956 7.17199 37.2569C7.27806 37.5181 7.45522 37.7444 7.68336 37.9101C7.91151 38.0758 8.18152 38.1743 8.46278 38.1943C8.74404 38.2144 9.02529 38.1553 9.27464 38.0236L20.0002 32.3845L30.7258 38.0236C31.0186 38.1794 31.3586 38.2314 31.6845 38.1747C32.5063 38.033 33.0589 37.2538 32.9172 36.432L30.8675 24.4879L39.5433 16.0293C39.7794 15.7979 39.9353 15.4957 39.9825 15.1651C40.1101 14.3386 39.5339 13.5735 38.7074 13.4507Z' fill='%23006FFD'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_4162_22502)'%3E%3Crect width='40' height='40' fill='%23FFC60C'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_4162_22502'%3E%3Crect width='40' height='40' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") repeat-x;
+            filter: opacity(0);
+            opacity: 0;
+
+            &:hover {
+                opacity: 1;
+                filter: opacity(100) drop-shadow(0 0 2px rgba(0, 0, 0, 0.25));
+            }
+        }
+
+        input {
+            position: absolute;
+            width: 0;
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+
+            &:checked {
+                ~ span {
+                    filter: opacity(100);
+                    opacity: 1;
+
+                    &:hover {
+                        filter: opacity(100) drop-shadow(0 0 2px rgba(0, 0, 0, 0.25));
+                    }
+                }
+            }
+        }
+    }
+
+    :global(.inputStart0) {
+        z-index: 5;
+        width: 50px;
+    }
+
+    :global(.inputStart1) {
+        z-index: 4;
+        width: 100px;
+    }
+
+    :global(.inputStart2) {
+        z-index: 3;
+        width: 150px;
+    }
+
+    :global(.inputStart3) {
+        z-index: 2;
+        width: 200px;
+    }
+
+    :global(.inputStart4) {
+        z-index: 1;
+        width: 250px;
+    }
+}
+
+.reviewFields {
+    label {
+        margin-bottom: 5px;
+    }
+
+    .inputLimit {
+        margin-top: 5px;
+        font-size: 12px;
+        line-height: 1.33333;
+        letter-spacing: 0.12px;
+
+        &:before {
+            content: "* ";
+            color: #A2A4A6;
+        }
+    }
+}
+
+.reviewActions {
+    button {
+        display: inline-block;
+        width: auto;
+        padding: 12px 30px;
+    }
+}
+
+@media (min-width: 769px) {
+    .root {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: #FFF;
+        border: 1px solid #DEDEDE;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 768px) {
+    .root {
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: 20px;
+        padding: 15px;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+    }
+}

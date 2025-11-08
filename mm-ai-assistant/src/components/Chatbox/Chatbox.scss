@@ -1,0 +1,153 @@
+.chatbox-trigger {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+}
+
+.chatbox-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  height: 600px;
+  max-width: 100vw;
+  max-height: 100vh;
+  background: #fff;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+
+  &.fullscreen {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  &.history-opened {
+    .chatbox-history {
+      display: block;
+    }
+  }
+}
+
+.chatbox-layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #1890ff;
+  color: #fff;
+  border-bottom: 1px solid #e8e8e8;
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .header-icon {
+      font-size: 20px;
+    }
+
+    .header-title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    gap: 4px;
+
+    .ant-btn {
+      color: #fff;
+      border-color: transparent;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+.chatbox-body {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+}
+
+.chatbox-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+
+  &.drag-over {
+    background: rgba(24, 144, 255, 0.05);
+  }
+
+  .drop-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(24, 144, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    border: 2px dashed #1890ff;
+
+    .drop-message {
+      font-size: 16px;
+      color: #1890ff;
+      font-weight: 500;
+    }
+  }
+
+  .loading-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 100;
+  }
+}
+
+.chatbox-sidebar {
+  border-left: 1px solid #e8e8e8;
+  overflow-y: auto;
+
+  .sidebar-empty {
+    padding: 24px;
+    text-align: center;
+    color: #999;
+  }
+}
+
+@media (max-width: 768px) {
+  .chatbox-container {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+

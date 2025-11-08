@@ -1,0 +1,14 @@
+.root {
+    height: 100%;
+
+    .tree {
+        height: 100%;
+    }
+}
+
+.branches {
+    overflow-y: auto;
+    height: 100%;
+    margin-right: -15px;
+    padding-right: 15px;
+}

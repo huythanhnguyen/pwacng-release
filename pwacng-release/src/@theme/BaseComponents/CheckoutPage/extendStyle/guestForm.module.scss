@@ -1,0 +1,68 @@
+.root {
+    display: block;
+}
+
+.block {
+    border-radius: 4px;
+    background: #FFF;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.contentTitle {
+    color: #0272BA;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.guestAddress > div {
+    margin-bottom: 0;
+}
+
+.newAdministrativeNote,
+.guestAddress > .newAdministrativeNote {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: #E82230;
+}
+
+@media (min-width: 1366px) {
+    .fields {
+        display: flex;
+        gap: 10px;
+    }
+    .guestInformation {
+        display: flex;
+        gap: 10px;
+
+        > div {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .block {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1365px) {
+    .guestInformation {
+        > div:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .block {
+        padding: 10px;
+    }
+}

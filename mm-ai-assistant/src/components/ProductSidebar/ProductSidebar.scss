@@ -1,0 +1,51 @@
+.product-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+
+  .sidebar-header {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .keyword-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e8e8e8;
+
+    .keyword-button {
+      &.active {
+        background: #1890ff;
+        border-color: #1890ff;
+        color: #fff;
+      }
+    }
+  }
+
+  .product-list {
+    flex: 1;
+    overflow-y: auto;
+
+    .ant-list {
+      .ant-list-item {
+        padding: 8px 0;
+      }
+    }
+
+    .ant-card {
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+

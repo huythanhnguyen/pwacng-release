@@ -1,0 +1,29 @@
+.root {
+    position: relative;
+    margin-bottom: 20px;
+    display: block;
+
+    input {
+        border-color: #A2A4A6;
+        padding: 10px 14px;
+    }
+
+    .before {
+        position: absolute;
+        top: 13px;
+        right: 14px;
+        cursor: pointer;
+        z-index: 1;
+        display: flex;
+
+        button:after {
+            background-image: url("data:image/svg+xml,%3Csvg width='23' height='22' viewBox='0 0 23 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.448 19.1094L18.4729 15.1356C19.5627 13.5739 20.2066 11.6792 20.2066 9.63177C20.2066 4.31228 15.8944 0 10.575 0C5.25557 0 0.943359 4.31228 0.943359 9.63177C0.943359 14.9513 5.25557 19.2635 10.575 19.2635C12.6224 19.2635 14.5171 18.6196 16.0788 17.5298L20.0525 21.5036C20.7143 22.1655 21.7862 22.1655 22.448 21.5036C23.1085 20.8432 23.1085 19.7713 22.448 19.1094ZM10.575 16.5116C6.77599 16.5116 3.69525 13.4308 3.69525 9.63177C3.69525 5.83273 6.77599 2.75193 10.575 2.75193C14.374 2.75193 17.4547 5.83273 17.4547 9.63177C17.4547 13.4308 14.374 16.5116 10.575 16.5116Z' fill='%232A2F33'/%3E%3C/svg%3E%0A");
+            content: '';
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 15px;
+            height: 15px;
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,136 @@
+.root {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.cardHeadTitle {
+    strong {
+        color: #0A1015;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.2px;
+        display: block;
+
+        span {
+            color: #0272BA;
+            padding-left: 6px;
+        }
+    }
+}
+
+.editButton {
+    display: block;
+    color: #1D92DD;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    text-decoration-line: underline;
+}
+
+.block {
+    border-radius: 4px;
+    background: #FEFFFF;
+    width: 100%;
+}
+
+.blockTitle {
+    color: #0272BA;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.customerItem {
+    &:not(:last-child) {
+        margin-bottom: 7px;
+    }
+}
+
+.label {
+    color: #7A7E80;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+}
+
+.value {
+    color: #0A1015;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    padding-left: 4px;
+}
+
+.vatLabel {
+    color: #7A7E80;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.vatValue {
+    color: #2A2F33;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.name, .phoneNumber {
+    margin-bottom: 6px;
+}
+
+.deliveryInformation {
+    padding-top: 15px;
+}
+
+.labelSpacing {
+    color: #7A7E80;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.blockItem {
+    &:not(:last-child) {
+        border-bottom: 1px solid #F0F0F0;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .container {
+        display: flex;
+        gap: 10px;
+    }
+
+    .block {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .block {
+        padding: 10px;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}

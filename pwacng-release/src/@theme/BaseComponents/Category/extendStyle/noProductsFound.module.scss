@@ -1,0 +1,41 @@
+.root {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: pb-10 from global;
+    width: 100%;
+}
+
+.title {
+    composes: font-semibold from global;
+    composes: text-colorDefault from global;
+    composes: text-center from global;
+}
+
+.categories {
+    composes: mt-md from global;
+    text-align: center;
+}
+
+.list {
+    composes: mt-xs from global;
+}
+
+.listItem {
+    composes: mb-2xs from global;
+    composes: text-center from global;
+    composes: underline from global;
+
+    composes: last_mb-0 from global;
+}
+
+.imageContainer {
+    composes: mb-md from global;
+
+    .image {
+        display: none;
+        width: 100px;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,110 @@
+.root {
+    composes: max-w-site from global;
+    composes: mx-auto from global;
+    composes: my-0 from global;
+    composes: px-sm from global;
+    composes: py-md from global;
+
+    composes: lg_px-lg from global;
+}
+
+.heading {
+    composes: capitalize from global;
+    composes: font-bold from global;
+    composes: font-serif from global;
+    composes: leading-tight from global;
+    composes: mb-md from global;
+    composes: text-center from global;
+}
+
+.content {
+    composes: gap-xs from global;
+    composes: grid from global;
+    composes: grid-cols-1 from global;
+    grid-auto-rows: minmax(6rem, max-content);
+
+    composes: sm_grid-cols-2 from global;
+
+    composes: lg_grid-cols-3 from global;
+}
+
+.addButton {
+    composes: border-2 from global;
+    composes: border-dashed from global;
+    composes: border-subtle from global;
+    composes: font-semibold from global;
+    composes: rounded-box from global;
+    composes: text-brand-dark from global;
+    composes: text-sm from global;
+    transition: border-color 384ms var(--venia-global-anim-standard);
+
+    composes: focus_outline-none from global;
+    composes: focus_shadow-buttonFocus from global;
+
+    composes: hover_border-brand-dark from global;
+
+    &:focus {
+        box-shadow: -6px 6px rgb(var(--venia-global-color-blue-100));
+    }
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 33px;
+        height: 32px;
+        text-align: center;
+        border: 1px solid #D9D9D9;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #595959;
+
+        svg {
+            --stroke: #595959;
+        }
+
+        &:disabled {
+            svg {
+                --stroke: #BFBFBF;
+            }
+        }
+
+        &:not(.activePage):not(:disabled):hover {
+            border-color: #999999;
+        }
+
+        &.activePage {
+            color: #1890FF;
+            border-color: #1890FF;
+        }
+    }
+}
+
+.emptyAddressMessage {
+    margin-top: 20px;
+    color: #7A7E80;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.18px;
+}
+
+@media (min-width: 769px) {
+    .addressBookWrapper {
+        padding: 20px;
+        background: #FFF;
+        border: 1px solid #F1F1F1;
+        border-radius: 4px;
+    }
+
+    .emptyAddressMessage {
+        margin-top: 42px;
+    }
+}

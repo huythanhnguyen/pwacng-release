@@ -1,0 +1,52 @@
+.root {
+    composes: grid from global;
+    gap: 0 10px;
+    composes: grid-cols-2 from global;
+}
+
+.newAdministrativeNote {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #E82230;
+}
+
+.fullWidthField {
+    composes: col-end-span2 from global;
+}
+
+.addressDialog {
+    composes: dialog from '../../Dialog/extendStyle/dialog.module.scss';
+    width: 600px;
+}
+
+.addressCancelButton {
+    display: none;
+}
+
+.default_address_check {
+    margin-top: 10px;
+    margin-bottom: 1px;
+}
+
+@media (min-width: 769px) {
+    .default_address_check {
+        margin-bottom: 4px;
+    }
+}
+
+@media (max-width: 768px) {
+    .root {
+        > div {
+            > div {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .newAdministrativeNote {
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+}

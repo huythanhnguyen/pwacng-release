@@ -1,0 +1,359 @@
+.footer {
+    max-width: 1482px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.links {
+    background: #E3F3FF;
+}
+
+.root {
+    :global(.pagebuilderText):not(.footer-list-link) {
+        strong {
+            display: block;
+            color: #000;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 0.08px;
+            padding: 10px 0;
+        }
+    }
+
+    :global(.footer-list-link) {
+        li {
+            &:hover {
+                color: #0272BA;
+            }
+        }
+    }
+
+    :global(.footer-icons) p {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    :global(.footer-icons), :global(.footer-list-link) {
+        &:not(:last-child) {
+            border-bottom: 1px solid #C9E3F6;
+        }
+    }
+}
+
+.findLocation {
+    border-radius: 200px;
+    background: #FFF;
+    padding: 10px 13px;
+    color: #2A2F33;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: inline-block;
+}
+
+.storeInformation {
+    .logoContainer {
+        display: block;
+    }
+
+    .storeName {
+        color: #000;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.09px;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    .storeAddress {
+        color: #2A2F33;
+        font-weight: 400;
+        line-height: 20px;
+        margin-bottom: 8px;
+    }
+
+    .bct {
+        border-top: 1px solid #C9E3F6;
+
+        img {
+            max-height: 61px;
+            object-fit: contain;
+        }
+    }
+}
+
+.footerDelivery {
+    max-width: 937px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+
+    .deliveryWrapper {
+        :global(.columnLine) {
+            gap: 20px;
+        }
+
+        :global(.pagebuilder-column) {
+            gap: 15px;
+            align-items: center;
+            flex-direction: row !important;
+        }
+
+        strong {
+            color: #0272BA;
+        }
+    }
+}
+
+.branding {
+    text-align: center;
+    color: #7A7E80;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.services {
+    margin-bottom: 20px;
+
+    :global(.pagebuilder-column) {
+        border-radius: 4px;
+        background: #F8F8F8;
+
+        img {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+
+        strong {
+            display: block;
+            margin-bottom: 9px;
+            color: #000;
+            line-height: normal;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        padding: 30px 20px;
+    }
+
+    .root {
+        width: 80%;
+
+        :global(.pagebuilderText):not(.footer-list-link) {
+            strong {
+                margin-bottom: 15px;
+            }
+        }
+
+        :global(.footer-icons) p {
+            max-width: 194px;
+        }
+
+        :global(.footer-list-link) {
+            li:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        :global(.footer-icons), :global(.footer-list-link) {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+            }
+        }
+    }
+
+    .services {
+        :global(.columnLine) {
+            gap: 30px;
+        }
+
+        :global(.pagebuilder-column) {
+            padding: 30px;
+
+            strong {
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 0.08px;
+            }
+        }
+    }
+
+    .storeInformation {
+        .logoContainer {
+            margin-bottom: 25px;
+        }
+
+        .storeAddress {
+            font-size: 14px;
+        }
+
+        .bct {
+            padding-top: 25px;
+            margin-top: 25px;
+        }
+    }
+
+    .links {
+        gap: 30px;
+        padding: 30px;
+        display: flex;
+        border-radius: 4px;
+
+        :global(.columnLine) {
+            gap: 30px;
+        }
+    }
+
+    .storeInformation {
+        width: 20%;
+    }
+}
+
+@media (min-width: 769px) {
+    .footerDelivery {
+        .deliveryWrapper {
+            :global(.pagebuilder-column) {
+                justify-content: center !important;
+            }
+        }
+    }
+
+    .branding {
+        padding-top: 20px;
+        border-top: 1px solid #EAEAEA;
+    }
+}
+
+@media (max-width: 1023px) {
+    .footer {
+        padding: 20px 0;
+    }
+
+    .root {
+        :global(.pagebuilderText):not(.footer-list-link) {
+            strong {
+                margin-bottom: 10px;
+            }
+        }
+
+        :global(.footer-list-link) {
+            li:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+
+        :global(.footer-icons), :global(.footer-list-link) {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    .services {
+        padding: 0 20px;
+
+        :global(.columnLine) {
+            gap: 10px;
+        }
+
+        :global(.pagebuilder-column) {
+            padding: 10px;
+
+            strong {
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            p:not(:first-child) a {
+                display: block;
+            }
+        }
+    }
+
+    .storeInformation {
+        margin-bottom: 10px;
+
+        .storeWrapper {
+            display: flex;
+            gap: 10px;
+
+            .logo {
+                max-height: 66px;
+                width: 90px;
+                object-fit: contain;;
+            }
+        }
+
+        .storeAddress {
+            font-size: 12px;
+        }
+
+        .bct {
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+    }
+
+    .links {
+        padding: 20px;
+
+        :global(.pagebuilder-column) {
+            padding: 10px 0;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .branding {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .links {
+        :global(.columnLine) {
+            gap: 0 20px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footerCartPage {
+        padding-bottom: 170px;
+    }
+
+    .services {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        :global(.pagebuilder-column) {
+            flex-basis: auto;
+            width: calc(50% - 5px) !important;
+        }
+    }
+
+    .links,
+    .footerDelivery,
+    .branding {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .copyright {
+        text-align: left;
+    }
+}

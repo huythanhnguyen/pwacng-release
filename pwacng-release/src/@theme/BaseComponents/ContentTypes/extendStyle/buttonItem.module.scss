@@ -1,0 +1,39 @@
+.linkButton {
+    font-size: 16px;
+    color: #0272BA;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+:global(.pagebuilderButtons) {
+    margin-top: -0.5rem;
+    margin-bottom: -0.5rem;
+
+    > div {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &[style *= 'text-align:right'],
+    &[style *= 'text-align: right'] {
+        > div {
+            &:last-child {
+                margin-inline-end: 0;
+            }
+        }
+    }
+
+    &[style *= 'text-align:center'],
+    &[style *= 'text-align: center'] {
+        > div {
+            &:last-child {
+                margin-inline-start: 0.5rem;
+                margin-inline-end: 0.5rem;
+            }
+        }
+    }
+}

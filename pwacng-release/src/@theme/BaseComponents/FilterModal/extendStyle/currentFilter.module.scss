@@ -1,0 +1,17 @@
+.root {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 10px 8px 6px;
+    color: #FFFFFF;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    background: #0272BA;
+    border-radius: 4px;
+}
+
+.root svg {
+    width: 17px;
+    height: 16px;
+    --stroke: #FFFFFF
+}

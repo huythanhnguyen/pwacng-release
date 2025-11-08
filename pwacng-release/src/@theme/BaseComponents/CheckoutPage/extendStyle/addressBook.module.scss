@@ -1,0 +1,46 @@
+.root {
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.blockTitle {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+
+    strong {
+        color: #0272BA;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+}
+
+.addButton > span {
+    display: flex;
+    gap: 10px;
+    color: #0272BA;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.16px;
+}
+
+.content {
+    display: block;
+}
+
+@media (min-width: 1024px) {
+    .root {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .root {
+        padding: 10px;
+    }
+}

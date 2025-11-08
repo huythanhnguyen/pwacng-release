@@ -1,0 +1,153 @@
+.root {
+    display: flex;
+    width: 100%;
+    max-width: 245px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFF;
+    background: #0272BA;
+    border: 1px solid #1D92DD;
+    border-radius: 30px;
+    -o-transition: width 0.3s ease;
+    -moz-transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+    height: 50px;
+    padding: 8px;
+    gap: 10px;
+
+    > span {
+        width: 100%;
+    }
+}
+
+.label {
+    display: none;
+}
+
+.input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #FFF;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    margin: 0 auto;
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.button {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    margin: auto 1px;
+    background-size: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: none;
+    outline: none;
+    transition: background 0.3s ease, opacity 0.3s ease;
+    background: #FFF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='2' viewBox='0 0 14 2' fill='none'%3E%3Cpath d='M1 1H13' stroke='%23005C98' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center;
+
+    &:hover {
+        background: #005388 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='2' viewBox='0 0 14 2' fill='none'%3E%3Cpath d='M1 1H13' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center;
+    }
+
+    .icon {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+    }
+
+    svg {
+        display: none;
+    }
+}
+
+.button_decrement {
+    composes: button;
+}
+
+.button_increment {
+    composes: button;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M1 7H13' stroke='%23005C98' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M7 1L7 13' stroke='%23005C98' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+
+    &:hover {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M1 7H13' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M7 1L7 13' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    }
+}
+
+.button:disabled {
+    pointer-events: none;
+}
+
+//.wrap {
+//    composes: flex from global;
+//    composes: items-center from global;
+//    composes: justify-center from global;
+//}
+//
+//.button {
+//    composes: bg-white from global;
+//    composes: border-2 from global;
+//    composes: border-solid from global;
+//    composes: border-button from global;
+//    composes: h-[2rem] from global;
+//    composes: inline-flex from global;
+//    composes: items-center from global;
+//    composes: justify-center from global;
+//    composes: rounded-button from global;
+//    composes: w-[2rem] from global;
+//    stroke: rgb(var(--stroke));
+//
+//    composes: disabled_cursor-not-allowed from global;
+//}
+//
+//.button:hover {
+//    --stroke: rgb(var(--venia-global-color-gray-900));
+//    border-color: rgb(var(--stroke));
+//}
+//
+//.button:disabled,
+//.button:disabled:hover {
+//    --stroke: rgb(var(--venia-global-color-gray-400));
+//    @apply border-base;
+//}
+//
+//.button_decrement {
+//    composes: button;
+//}
+//
+//.button_increment {
+//    composes: button;
+//}
+//
+//.icon {
+//    composes: items-center from global;
+//    composes: inline-flex from global;
+//    composes: justify-center from global;
+//    touch-action: manipulation;
+//}
+//
+//.input {
+//    composes: input from '../TextInput/textInput.module.css';
+//
+//    composes: text-center from global;
+//}

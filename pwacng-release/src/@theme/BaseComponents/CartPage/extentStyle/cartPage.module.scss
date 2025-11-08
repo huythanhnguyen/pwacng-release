@@ -1,0 +1,367 @@
+.root {
+    display: block;
+    padding-left: 14px;
+    padding-right: 14px;
+    max-width: 1466px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.breadcrumbs {
+    margin-bottom: 20px;
+
+    > div {
+        margin-left: 0;
+    }
+}
+
+.heading_container {
+    display: block;
+}
+
+.heading {
+    color: #005C98;
+    font-weight: 500;
+    line-height: normal;
+    display: block;
+}
+
+.miniCartNote {
+    color: #545454;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+
+    span {
+        color: #DF6069;
+    }
+
+    &:before {
+        content: '*';
+        display: inline-block;
+        color: #FF2121;
+        margin-right: 5px;
+    }
+}
+
+.distance, .shippingNote {
+    display: none;
+}
+
+.body {
+    .items_container {
+        background: #F8F8F8;
+    }
+
+    .summary_container {
+        background: #F8F8F8;
+        padding: 10px;
+    }
+}
+
+.main {
+    :global {
+        .slick-slider.slick-initialized {
+            .slick-prev {
+                left: -8px;
+            }
+
+            .slick-next {
+                right: -8px;
+            }
+        }
+
+        .products-background-wrapper {
+            .slick-slider.slick-initialized {
+                .slick-prev {
+                    left: 0;
+                }
+
+                .slick-next {
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+.cartEmpty {
+    text-align: center;
+    padding-top: 130px;
+    padding-bottom: 140px;
+
+    img {
+        margin: 0 auto 30px;
+    }
+
+    strong {
+        color: #2A2F33;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 20px;
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    button {
+        width: auto;
+    }
+}
+
+.crossSellProduct {
+    overflow: hidden;
+    position: relative;
+
+    .title {
+        strong {
+            color: #2A2F33;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+    :global {
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-list {
+            overflow: hidden;
+        }
+
+        .slick-slider.slick-initialized {
+            .slick-arrow {
+                top: 50%;
+                font-size: 0;
+                line-height: 0;
+                color: rgba(0, 0, 0, 0);
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.modalPriceChangeInnerWidth {
+    max-width: 450px;
+
+    > div:last-child {
+        padding: 15px;
+    }
+
+    .priceChangeModal {
+        text-align: center;
+
+        img {
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .description {
+            color: #0A1015;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.2px;
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .body {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        padding-bottom: 175px;
+
+        .main {
+            width: 62%;
+        }
+
+        .items_container {
+            border-radius: 4px;
+        }
+
+        .summary_container {
+            width: 38%;
+            border-radius: 4px;
+            position: sticky;
+        }
+    }
+
+    .crossSellProduct {
+        margin-top: 30px;
+
+        .title {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .heading {
+        font-size: 28px;
+        letter-spacing: 0.28px;
+        margin-bottom: 10px;
+    }
+
+    .body {
+        margin-top: 20px;
+    }
+
+    .items_container {
+        padding: 15px;
+    }
+
+    .summary_container {
+        top: 150px;
+    }
+
+    .crossSellProduct {
+        .title {
+            strong {
+                font-size: 24px;
+                letter-spacing: 0.24px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1540px) {
+    .main {
+        :global {
+            .slick-slider.slick-initialized {
+                .slick-prev {
+                    left: -36px;
+                }
+
+                .slick-next {
+                    right: -36px;
+                }
+            }
+
+            .products-background-wrapper {
+                .slick-slider.slick-initialized {
+                    .slick-prev {
+                        left: -21px;
+                    }
+
+                    .slick-next {
+                        right: -21px;
+                    }
+                }
+            }
+        }
+    }
+
+    .crossSellProduct {
+        padding-right: 41px;
+        padding-left: 40px;
+        margin-left: -40px;
+        margin-right: -40px;
+
+        :global {
+            .slick-slider.slick-initialized {
+                .slick-prev {
+                    left: 5px;
+                }
+
+                .slick-next {
+                    right: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1539px) and (min-width: 769px) {
+    .crossSellProduct {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin-right: -10px;
+        margin-left: -10px;
+
+        :global {
+            .slick-slider.slick-initialized {
+                .slick-prev {
+                    left: 0;
+                }
+
+                .slick-next {
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .heading {
+        font-size: 20px;
+        letter-spacing: 0.2px;
+        margin-bottom: 5px;
+    }
+
+    .body {
+        margin-top: 10px;
+    }
+
+    .items_container {
+        padding: 10px;
+    }
+
+    .crossSellProduct {
+        .title {
+            strong {
+                font-size: 20px;
+                letter-spacing: 0.2px;
+            }
+        }
+    }
+
+    @media (min-width: 769px) {
+        .summary_container {
+            top: 100px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .body {
+        margin-left: -14px;
+        margin-right: -14px;
+    }
+
+    .main {
+        :global(.products-background-wrapper:first-child:last-child) {
+            margin-left: 0;
+            margin-right: 0;
+            width: 100% !important;
+        }
+    }
+
+    .summary_container {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 4px;
+        background: #F8F8F8;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.30);
+        z-index: 9;
+    }
+
+    .crossSellProduct {
+        padding: 0 10px 10px;
+        border-top: 1px solid #E4E1E1;
+
+        .title {
+            padding: 15px 10px;
+        }
+
+        :global(.slick-arrow) {
+            display: none !important;
+        }
+    }
+}

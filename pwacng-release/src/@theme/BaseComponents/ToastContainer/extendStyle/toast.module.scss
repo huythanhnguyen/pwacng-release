@@ -1,0 +1,9 @@
+.dismissButton {
+    composes: text-subtle from global;
+
+    svg {
+        margin: 2px 0;
+        width: 16px;
+        height: 16px;
+    }
+}

@@ -1,0 +1,87 @@
+.root {
+    .breadcrumbs {
+        margin-bottom: 15px;
+    }
+
+    .title {
+        color: #0272BA;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 30px;
+    }
+
+    .pagination {
+        margin-top: 30px;
+    }
+}
+
+.emptyWrapper {
+    composes: relative from global;
+
+    &:before {
+        content: '';
+        background: #F4F9FF;
+        @apply w-screen;
+        @apply absolute;
+        @apply h-full;
+        @apply top-0;
+        @apply left-1/2;
+        transform: translateX(-50%);
+    }
+}
+
+.emptyTitle {
+    font-size: 26px;
+    composes: font-medium from global;
+    color: #2A2F33;
+    padding: 50px 0;
+    composes: text-center from global;
+    z-index: 1;
+    composes: relative from global;
+}
+
+@media (min-width: 1024px) {
+    .root {
+        > div {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .root {
+        .title {
+            font-size: 28px;
+            letter-spacing: 0.28px;
+        }
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 769px) {
+    .root {
+        > div {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media (max-width: 768px) and (min-width: 461px) {
+    .root {
+        > div {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .root {
+        .title {
+            font-size: 24px;
+            letter-spacing: 0.24px;
+        }
+
+        .pagination > div {
+            justify-content: center;
+        }
+    }
+}

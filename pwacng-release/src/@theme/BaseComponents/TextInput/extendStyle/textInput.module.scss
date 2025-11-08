@@ -1,0 +1,34 @@
+.input {
+    border-radius: 4px;
+    border: 1px solid #DBDBDB;
+    background: #FFF;
+    padding: 12px 14px;
+    width: 100%;
+    font-size: 15px;
+    line-height: normal;
+    color: #0A1015;
+    display: block;
+
+    &::placeholder {
+        color: #AFAFAF;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    &:focus {
+        border-color: #71B4FF;
+        box-shadow: 0 2px 5px 0 rgba(113, 180, 255, 0.50);
+    }
+}
+
+.input_error {
+    composes: input;
+
+    border-color: #FF8790;
+    box-shadow: 0 2px 5px 0 rgba(255, 135, 144, 0.50);
+}

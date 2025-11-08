@@ -1,0 +1,38 @@
+.errorContainer {
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.confirmButton {
+    composes: root_highPriority from '../../Button/extendStyle/button.module.scss';
+}
+
+.cancelButton {
+    composes: root_normalPriority from '../../Button/extendStyle/button.module.scss';
+}
+
+@media (min-width: 769px) {
+    .root {
+        width: 100%;
+        max-width: 800px;
+        padding: 20px;
+        background: #FFF;
+        border: 1px solid #F1F1F1;
+        border-radius: 4px;
+    }
+
+    .buttons {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .root {
+        padding-bottom: 20px;
+    }
+}

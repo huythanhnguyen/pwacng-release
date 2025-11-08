@@ -1,0 +1,26 @@
+.items {
+    composes: grid from global;
+    grid-template-columns: 100%;
+    gap: 12px;
+    margin-bottom: 12px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.item {
+    > label {
+        vertical-align: top;
+        padding: 0;
+    }
+}
+
+.showMoreLessItem {
+    composes: pl-1 from global;
+}
+
+.showMoreLessButton {
+    composes: text-sm from global;
+    composes: underline from global;
+}

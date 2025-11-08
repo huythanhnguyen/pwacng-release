@@ -1,0 +1,41 @@
+.dnrBlock {
+    margin-bottom: 5px;
+    padding: 15px 10px;
+    background: #FAFAFA;
+    border-radius: 8px;
+}
+
+.dnrTitle {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.dnrList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.dnrItem {
+    min-width: 80px;
+    padding: 11px 9px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #E8E8E8;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    color: #475C6D;
+}
+
+.dnrPrice {
+    display: block;
+    color: #005C98;
+    font-size: 15px;
+    font-weight: bold;
+}

@@ -1,0 +1,148 @@
+.recentOrdersTitle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    color: #0A1015;
+
+    a {
+        margin-left: auto;
+        font-size: 16px;
+        letter-spacing: 0.16px;
+        color: #0272BA;
+    }
+}
+
+.orderRow {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #FFF;
+    border: 1px solid #F1F1F1;
+    border-radius: 4px;
+}
+
+.orderTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.orderId {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.id {
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.16px;
+
+    .value {
+        font-weight: 500;
+    }
+}
+
+.status {
+    display: inline-block;
+    margin-right: auto;
+    padding: 10px;
+    font-size: 14px;
+    letter-spacing: 0.14px;
+    line-height: normal;
+    color: #0272BA;
+    background: #E2F3FF;
+    border-radius: 6px;
+
+    &:global(.state_complete),
+    &:global(.status_delivery_success) {
+        color: #4BB468;
+        background-color: #C8F6D5;
+    }
+
+    &:global(.state_closed),
+    &:global(.state_canceled),
+    &:global(.state_pending_payment),
+    &:global(.status_waiting_cancel),
+    &:global(.status_delivery_failed) {
+        color: #E82230;
+        background-color: #FFD7D7;
+    }
+}
+
+.orderDate {
+    letter-spacing: 0.14px;
+    color: #0A1015;
+
+    .label {
+        color: #7A7E80;
+    }
+}
+
+.orderTotals {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.orderTotal {
+    margin-left: auto;
+    text-align: right;
+
+    .label {
+        margin-right: 8px;
+        line-height: 1.14286;
+        letter-spacing: 0.14px;
+        color: #7A7E80;
+    }
+
+    .price {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: normal;
+        color: #0A1015;
+    }
+}
+
+.orderTotals {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #EEEEEE;
+}
+
+@media (min-width: 769px) {
+    .recentOrdersTitle {
+        margin-bottom: 20px;
+        font-size: 24px;
+        letter-spacing: 0.24px;
+    }
+
+    .orderRow {
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .orderTitle {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .orderId {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .orderDate {
+        margin-left: auto;
+    }
+}

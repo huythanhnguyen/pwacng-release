@@ -1,0 +1,26 @@
+.contactFormInner {
+    h2 {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: normal;
+        letter-spacing: 0.16px;
+        font-weight: 700;
+        color: #0272BA;
+        text-transform: uppercase;
+    }
+}
+
+.contactFieldSet {
+    display: flex;
+    flex-direction: column;
+
+    .contactField {
+        &:global(.comment) {
+            order: -1;
+        }
+    }
+
+    textarea {
+        height: 197px;
+    }
+}

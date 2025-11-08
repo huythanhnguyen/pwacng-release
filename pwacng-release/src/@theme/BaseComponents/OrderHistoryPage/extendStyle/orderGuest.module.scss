@@ -1,0 +1,63 @@
+.guestOrderTracking {
+    margin-bottom: 20px;
+}
+
+.orderTrackingMessage {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #F8FFF8;
+    border: 1px solid #90FF8A;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.16px;
+}
+
+.orderTrackingForm {
+    margin: 12px auto;
+    padding: 10px;
+    background: #FFF;
+    border: 1px solid #E2E4E7;
+    border-radius: 4px;
+
+    h1 {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.22px;
+        color: #000;
+    }
+}
+
+.noResult {
+    text-align: center;
+    color: #7A7E80;
+}
+
+@media (min-width: 769px) {
+    .guestOrderTracking {
+        margin-bottom: 40px;
+    }
+
+    .orderTrackingMessage {
+        margin-bottom: 60px;
+    }
+
+    .orderTrackingForm {
+        max-width: 460px;
+        padding: 30px;
+
+        h1 {
+            font-size: 26px;
+            letter-spacing: 0.26px;
+        }
+    }
+
+    .noResult {
+        margin-top: 20px;
+    }
+}

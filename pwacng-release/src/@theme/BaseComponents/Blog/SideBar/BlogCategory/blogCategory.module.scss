@@ -1,0 +1,34 @@
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    gap: 20px;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #F0EFEF;
+    }
+
+    .name {
+        overflow: hidden;
+        color: #2A2F33;
+        text-overflow: ellipsis;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.08px;
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        max-height: 24px;
+    }
+
+    .count {
+        color: #7A7E80;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+}

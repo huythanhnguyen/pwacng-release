@@ -1,0 +1,30 @@
+.root {
+    composes: flex from global;
+    composes: flex-wrap from global;
+
+    composes: -lg_w-full from global;
+
+    margin-top: 15px;
+    gap: 5px;
+}
+
+.item {
+    composes: text-default from global;
+
+    padding: 5px 10px;
+    color: #295679;
+    background: #F1F6F9;
+    border-radius: 99px;
+
+    &.active {
+        @apply text-white;
+
+        background-color: #0272BA;
+    }
+}
+
+@media (min-width: 769px) {
+    .item {
+        padding: 8px 15px;
+    }
+}

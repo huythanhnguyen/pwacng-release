@@ -1,0 +1,91 @@
+.root {
+    composes: relative from global;
+    margin-left: auto;
+}
+
+.menu {
+    composes: absolute from global;
+    composes: bg-clip-padding from global;
+    composes: bg-white from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-subtle from global;
+    composes: list-none from global;
+    composes: mb-0 from global;
+    composes: mx-0 from global;
+    composes: right-0 from global;
+    composes: rounded from global;
+    composes: shadow-menu from global;
+    composes: text-colorDefault from global;
+    composes: text-left from global;
+    composes: z-menu from global;
+}
+
+.menuItem {
+    composes: border-b from global;
+    composes: border-solid from global;
+    composes: border-subtle from global;
+
+    composes: hover_bg-subtle from global;
+
+    composes: last_border-b-0 from global;
+}
+
+.sortButton {
+    composes: lg_font-normal from global;
+    composes: lg_normal-case from global;
+    composes: lg_rounded-input from global;
+    padding: 7px 9px;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    outline: none;
+
+    > span {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.desktopText {
+    composes: hidden from global;
+
+    composes: lg_inline-flex from global;
+    margin-right: 10px;
+    color: #8C8C8C;
+}
+
+.sortText {
+    composes: leading-normal from global;
+    composes: text-colorDefault from global;
+}
+
+.desktopIconWrapper {
+    composes: root from '~@magento/venia-ui/lib/components/Icon/icon.module.css';
+
+    transform: translateX(5px);
+
+    svg {
+        width: 22px;
+        height: 22px;
+        --stroke: #005C98;
+    }
+}
+
+.desktopIcon {
+    composes: icon from '~@magento/venia-ui/lib/components/Icon/icon.module.css';
+    composes: stroke-gray-500 from global;
+}
+
+.mobileText {
+    composes: lg_hidden from global;
+}
+
+@media (min-width: 960px) {
+    .sortButton {
+        padding: 6px 9px;
+    }
+
+    .root {
+        font-size: 16px;
+    }
+}

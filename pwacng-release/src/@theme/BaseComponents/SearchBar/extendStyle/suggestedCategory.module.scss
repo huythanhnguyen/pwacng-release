@@ -1,0 +1,4 @@
+.root {
+    composes: text-base from global;
+    composes: text-colorDefault from global;
+}

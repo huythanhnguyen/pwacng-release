@@ -1,0 +1,92 @@
+.boxTitle {
+    composes: flex from global;
+    composes: gap-4 from global;
+    composes: mb-5 from global;
+
+    composes: md_text-base from global;
+
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    color: #0272BA;
+}
+
+.viewDetails {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: text-base from global;
+    composes: ml-auto from global;
+    composes: gap-1 from global;
+    composes: normal-case from global;
+
+    color: #7A7E80;
+
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cmask id='mask0_13369_94767' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'%3E%3Crect width='16' height='16' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_13369_94767)'%3E%3Cpath d='M11.0743 8.49924H3.5C3.35811 8.49924 3.23933 8.45135 3.14367 8.35557C3.04789 8.25991 3 8.14113 3 7.99924C3 7.85735 3.04789 7.73857 3.14367 7.64291C3.23933 7.54713 3.35811 7.49924 3.5 7.49924H11.0743L8.8795 5.30441C8.78039 5.20518 8.73145 5.08913 8.73267 4.95624C8.734 4.82335 8.78295 4.70518 8.8795 4.60174C8.98295 4.49841 9.10172 4.44502 9.23583 4.44157C9.37006 4.43813 9.48889 4.48813 9.59233 4.59157L12.5782 7.57741C12.6406 7.63985 12.6846 7.70568 12.7102 7.77491C12.7358 7.84413 12.7487 7.91891 12.7487 7.99924C12.7487 8.07957 12.7358 8.15435 12.7102 8.22357C12.6846 8.2928 12.6406 8.35863 12.5782 8.42107L9.59233 11.4069C9.49311 11.506 9.37539 11.555 9.23917 11.5537C9.10283 11.5524 8.98295 11.5001 8.8795 11.3967C8.78295 11.2933 8.73294 11.1762 8.7295 11.0454C8.72606 10.9146 8.77606 10.7975 8.8795 10.6941L11.0743 8.49924Z' fill='%237A7E80'/%3E%3C/g%3E%3C/svg%3E") no-repeat center;
+    }
+}
+
+.deliveryTracking {
+    composes: m-0 from global;
+    composes: p-0 from global;
+}
+
+.deliveryItem {
+    composes: relative from global;
+    composes: flex from global;
+    composes: gap-7 from global;
+    composes: text-base from global;
+
+    color: #A2A4A6;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        min-width: 12px;
+        margin: 4px;
+        border-radius: 50%;
+        background: #A2A4A6;
+        position: relative;
+        z-index: 2;
+    }
+
+    &:not(:last-child) {
+        padding-bottom: 15px;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 2px;
+            height: 100%;
+            margin: 10px 9px;
+            background: #A2A4A6;
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    &.active {
+        &:before {
+            background: #0272BA;
+            box-shadow: 0 0 0 4px #F1F9FF;
+        }
+
+        .deliveryText {
+            color: #0A1015;
+        }
+    }
+}
+
+.deliveryTime {
+    min-width: 120px;
+}
+
+.deliveryText {
+    font-weight: 500;
+}

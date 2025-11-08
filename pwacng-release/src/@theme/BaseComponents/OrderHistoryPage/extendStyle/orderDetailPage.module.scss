@@ -1,0 +1,20 @@
+.orderPageTitle {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .orderPageTitle {
+        margin-bottom: 0;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .orderActions {
+        width: 100%;
+
+        > button {
+            flex: 1;
+        }
+    }
+}

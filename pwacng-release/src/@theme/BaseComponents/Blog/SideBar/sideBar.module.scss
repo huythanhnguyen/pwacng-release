@@ -1,0 +1,44 @@
+.sidebar {
+    width: 100%;
+    position: sticky;
+    top: 150px;
+}
+
+.block {
+    border-radius: 4px;
+    border: 1px solid #E6E6E6;
+    box-shadow: 0 4px 12px 0 rgba(122, 126, 128, 0.12);
+    margin-bottom: 20px;
+}
+
+.title {
+    color: #2A2F33;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.09px;
+    padding: 15px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.content {
+    padding: 15px;
+}
+
+@media (min-width: 1366px) {
+    .sidebar {
+        max-width: 338px;
+    }
+}
+
+@media (max-width: 1365px) and (min-width: 769px) {
+    .sidebar {
+        max-width: 258px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        margin-top: 30px;
+    }
+}

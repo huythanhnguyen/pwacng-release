@@ -1,0 +1,11 @@
+.root {
+    display: block;
+}
+
+.payment_method {
+    display: block;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}

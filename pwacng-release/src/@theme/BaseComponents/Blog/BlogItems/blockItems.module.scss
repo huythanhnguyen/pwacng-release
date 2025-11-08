@@ -1,0 +1,16 @@
+.root {
+    display: grid;
+    width: 100%;
+}
+
+@media (min-width: 769px) {
+    .root {
+        grid-gap: 20px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .root {
+        grid-gap: 10px;
+    }
+}

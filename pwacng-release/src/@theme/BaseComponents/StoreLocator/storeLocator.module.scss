@@ -1,0 +1,153 @@
+.root {
+    margin-top: 14px;
+}
+
+.pageTitle {
+    strong {
+        margin-right: 5px;
+        font-size: 20px;
+        letter-spacing: 0.2px;
+        line-height: normal;
+        font-weight: 500;
+        color: #0272BA;
+    }
+
+    .count {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.16px;
+        line-height: normal;
+        color: #A2A4A6;
+    }
+}
+
+.storeListContainer {
+    padding: 10px;
+    background: #F6F6F6;
+}
+
+.storeList {
+    margin-right: -8px;
+    padding-right: 8px;
+    max-height: 540px;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    @media (max-height: 700px) {
+        max-height: calc(100vh - 180px);
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .noResult {
+        text-align: center;
+        color: #7A7E80;
+    }
+}
+
+.mapContainer {
+    background: #F6F6F6;
+}
+
+@media (min-width: 769px) {
+    .root {
+        margin-top: 25px;
+    }
+
+    .pageTitleWrapper,
+    .storeListWrapper {
+        display: flex;
+        gap: 20px;
+    }
+
+    .pageTitle,
+    .storeListContainer {
+        width: 470px;
+        max-width: calc(45% - 20px);
+        padding-top: 18px;
+    }
+
+    .storeFilter,
+    .mapContainer {
+        width: calc(100% - 490px);
+        min-width: 55%;
+    }
+
+    .pageTitleWrapper {
+        margin-bottom: 20px;
+    }
+
+    .pageTitle {
+        strong {
+            font-size: 28px;
+            letter-spacing: 0.28px;
+            color: #2A2F33;
+        }
+
+        .count {
+            color: #7A7E80;
+        }
+    }
+
+    .storeListContainer {
+        border-radius: 4px;
+    }
+
+    .storeList {
+        max-height: 690px;
+
+        @media (max-height: 800px) {
+            max-height: calc(100vh - 200px);
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+    .pageTitleWrapper {
+        flex-direction: column;
+
+        .pageTitle,
+        .storeFilter {
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            padding-top: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .pageTitleWrapper {
+        margin-bottom: 22px;
+    }
+
+    .pageTitle {
+        margin-bottom: 20px;
+    }
+
+    .storeListWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mapContainer {
+        order: -1;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .storeListContainer {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+}
